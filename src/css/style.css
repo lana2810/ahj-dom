@@ -1,0 +1,40 @@
+:root {
+  --cell-size: 120px;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  background: burlywood;
+}
+.board-container {
+  padding: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#board {
+  border: 1px solid;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+}
+
+.cell {
+  position: relative;
+  width: var(--cell-size);
+  height: var(--cell-size);
+  border: 1px solid;
+}
+
+.character {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  position: absolute;
+  z-index: 99;
+}
